@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page</title>
+  <style>
+    :root {
+      --primary-color: #313131;
+      --secondary-color: #65d374;
+      --main-button: #ccf3d2;
+      --text-color: white;
+
+      --primary-card-color: #64d173;
+      --secondary-card-color: #cdf4d3;
+
+      --button-one: #864ffe;
+      --button-two: #3dadff;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--primary-color);
+      color: var(--text-color);
+    }
+
+    header {
+      background-color: var(--secondary-color);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header .logo img {
+      height: 40px;
+    }
+
+    nav button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      border: none;
+      background-color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-image: url('FONDO_IMAGE_PATH');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      padding: 160px 20px;
+      color: #000;
+      display: grid;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      color: var(--text-color);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin: 20px 0;
+      color: var(--text-color);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 0;
+    }
+
+    .hero .scroll-btn {
+      margin-top: 40px;
+      background-color: var(--main-button);
+      border: none;
+      padding: 15px 30px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 10px;
+      margin: 200px 0px 0px 0px;
+    }
+
+    .description {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .description h2 {
+      font-size: 36px;
+    }
+
+    .description p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .card {
+      background-color: var(--primary-card-color);
+      width: 200px;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      color: #000;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .contact-faq {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .contact-faq button {
+      margin: 10px;
+      padding: 15px 30px;
+      border: none;
+      font-weight: bold;
+      color: white;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+
+    .contact-faq .btn1 {
+      background-color: var(--button-one);
+    }
+
+    .contact-faq .btn2 {
+      background-color: var(--button-two);
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    footer a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: var(--text-color);
+    }
+
+    @media screen and (max-width: 980px) {
+        body {
+            background-color: #000000;
+            background-image: url("https://upload.wikimedia.org/wikipedia/en/9/9b/Hijitus_pichichus.png");
+            box-shadow: inset 0 0 0 1200px #000000f2;
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/mnt/data/0d791594-74b3-4cfb-a84e-6316d1424f9e.png" alt="Logo">
+    </div>
+    <nav>
+      <button>Reviews</button>
+      <button>Gallery</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>TITLE</h1>
+    <p>Simple Description</p>
+    <button class="scroll-btn" onclick="document.getElementById('description').scrollIntoView({ behavior: 'smooth' })">See More</button>
+  </section>
+
+  <section id="description" class="description">
+    <h2>About Us</h2>
+    <p>Some of our features</p>
+    <div class="cards">
+      <div class="card">
+        <img src="/mnt/data/01031f81-b003-4fce-abf7-71fce94529e4.png" alt="Feature 1">
+        <p>Description</p>
+      </div>
+      <div class="card">
+        <img src="/mnt/data/50cddaa6-f089-40a1-9011-1ff9a16561f0.png" alt="Feature 2">
+        <p>Description</p>
+      </div>
+      <div class="card">
+        <img src="/mnt/data/93fd0c92-2681-49c0-9607-205e2460603c.png" alt="Feature 3">
+        <p>Description</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-faq">
+    <button class="btn1" onclick="window.location.href='https://wa.me/'">Contact us</button>
+    <button class="btn2" onclick="window.location.href='#faq'">Frequently Asked Questions</button>
+  </section>
+
+  <footer>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+    Juan © 2025
+    <a href="#">LinkedIn</a>
+    <a href="#">Patreon</a>
+  </footer>
+</body>
+</html>
